@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2211"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.01" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.99" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/img"
+        android:layout_marginTop="@dimen/_40sdp"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTop" />
+
+   <ImageView
+       android:layout_width="40dp"
+       android:layout_height="wrap_content"
+       android:src="@drawable/line"
+       app:layout_constraintTop_toBottomOf="@+id/logo"
+       app:layout_constraintStart_toStartOf="@+id/guidelineLeft"/>
+    <ImageView
+        android:id="@+id/platform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/platform"
+        android:layout_marginBottom="-40dp"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineRight"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <FrameLayout
+        android:id="@+id/fltext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="300dp"
+        android:background="@drawable/backtext"
+        app:layout_constraintStart_toEndOf="@+id/guidelineLeft"
+       app:layout_constraintBottom_toBottomOf="@+id/guidelineBottom">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/fltv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/font1"
+                android:textSize="20sp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_55sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="By Clicking Continue, I\nAgree That I Am Least\n14 Years Old"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnYes"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:fontFamily="@font/font1"
+                android:text="Yes, Continue"
+                android:elevation="@dimen/_8sdp"
+                android:shadowRadius="10"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_12ssp"
+                android:shadowColor="@color/black"
+                android:background="@drawable/btn_bg"
+                app:layout_constraintTop_toBottomOf="@id/fltv1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="60dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:fontFamily="@font/font1"
+                android:text="No, I'm Not 14"
+                android:elevation="@dimen/_8sdp"
+                android:shadowRadius="10"
+                android:textSize="@dimen/_12ssp"
+                android:textAllCaps="false"
+                android:textColor="#700F66"
+                android:background="@drawable/btn_bg1"
+                app:layout_constraintTop_toBottomOf="@id/btnYes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="60dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/girl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:layout_marginStart="-140dp"
+        android:layout_marginBottom="-125dp"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineBottom"
+        android:rotationY="180"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        android:src="@drawable/img_2"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        android:layout_marginTop="-380dp"
+        app:layout_constraintTop_toBottomOf="@+id/logo"/>
+    <FrameLayout
+        android:id="@+id/fl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+       app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logo">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="157dp"
+            android:layout_height="98dp"
+            android:rotationY="180"
+            android:scaleType="fitCenter"
+            android:src="@drawable/mr" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:textColor="#D54DC3"
+            android:textSize="14sp"
+            android:paddingTop="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_20sdp"
+            android:text="Are U 14 Years Or Older?"
+            android:fontFamily="@font/font1"
+            android:layout_marginTop="32dp"/>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
